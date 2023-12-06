@@ -2,14 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: calc
-  labels:
-    app: calc
-  namespace: calc
 spec:
-  minReadySeconds: 60
   replicas: 1
-  strategy:
-    type: RollingUpdate
   selector:
     matchLabels:
       app: calc
@@ -22,10 +16,3 @@ spec:
        - name: calc
          image: wkandek/calc:2.0
          imagePullPolicy: Always
-         resources:
-           requests:
-             memory: "100Mi"
-             cpu: "100m"
-           limits:
-             memory: "100Mi"
-             cpu: "100m
