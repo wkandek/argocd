@@ -14,5 +14,5 @@ spec:
     spec:
       containers:
        - name: calc
-         image: wkandek/calc:2.0
+         image: wkandek/calc:5.0
          imagePullPolicy: Always
