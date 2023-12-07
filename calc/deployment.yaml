@@ -16,6 +16,12 @@ spec:
        - name: calc
          image: wkandek/calc:5.0
          imagePullPolicy: Always
+         env:
+           - name: CALC_TESTMODE
+             valueFrom:
+               configMapKeyRef:
+                 name: calc-config
+                 key: calc_testmode
          resources:
            requests:
              memory: 100Mi
