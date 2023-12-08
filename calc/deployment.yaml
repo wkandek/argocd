@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
        - name: calc
-         image: wkandek/calc:6.1
+         image: wkandek/calc:6.2
          imagePullPolicy: Always
          env:
            - name: CALC_TESTMODE
